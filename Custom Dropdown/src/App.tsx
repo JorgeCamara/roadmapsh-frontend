@@ -1,5 +1,5 @@
 import './App.css';
-import DropdownSelector from './containers/DropdownSelector';
+import DropdownSelector from '@containers/dropdown/DropdownSelector';
 
 function App() {
   return (
