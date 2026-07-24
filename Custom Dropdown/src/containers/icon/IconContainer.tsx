@@ -1,5 +1,5 @@
-import type { ComponentPropsWithoutRef } from 'react'
-import { getIconSource, type IconName } from './Icon';
+import type { ComponentPropsWithoutRef } from 'react';
+import { getIconSource, type IconName } from '@containers/icon/Icon';
 
 interface IconContainerPropsIntf
   extends Omit<ComponentPropsWithoutRef<'img'>, 'src' | 'alt'> {

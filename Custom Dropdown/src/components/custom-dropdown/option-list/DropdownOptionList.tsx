@@ -1,5 +1,5 @@
-import type { DropdownOptionListIntf, dropdownOptionIntf } from "./DropdownOptionList.types";
-import styles from './CustomDropdown.module.css';
+import type { DropdownOptionListIntf, dropdownOptionIntf } from "@components/custom-dropdown/option-list/DropdownOptionList.types";
+import styles from '@components/custom-dropdown/dropdown/CustomDropdown.module.css';
 
 function DropdownOptionList (props: DropdownOptionListIntf) {
     return (

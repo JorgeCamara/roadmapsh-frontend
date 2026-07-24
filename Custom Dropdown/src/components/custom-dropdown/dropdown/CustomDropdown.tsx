@@ -1,7 +1,7 @@
 import { useState } from "react";
-import DropdownOptionList from '../option-list/DropdownOptionList';
-import type { dropdownOptionIntf, CustomDropdownProps } from '../option-list/DropdownOptionList.types';
-import styles from './CustomDropdown.module.css';
+import DropdownOptionList from '@components/custom-dropdown/option-list/DropdownOptionList';
+import type { dropdownOptionIntf, CustomDropdownProps } from '@components/custom-dropdown/option-list/DropdownOptionList.types';
+import styles from '@components/custom-dropdown/dropdown/CustomDropdown.module.css';
 
 const DEFAULT_PLACEHOLDER = "Choose your option";
 
