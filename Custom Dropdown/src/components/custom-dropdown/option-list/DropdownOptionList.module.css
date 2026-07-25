@@ -1,0 +1,38 @@
+.optionListContainer{
+    display: flex;
+    flex: 1;
+    position: relative;
+    
+    min-width: 100%;
+
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.optionListContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+    list-style-type: none;
+
+    > li:not(:last-child) {
+        border-bottom: 1px solid #d6d6d6;
+    }
+}
+
+.optionListItems {
+    display: flex;
+    padding: 5px 15px;
+    width: 100%;
+    justify-content: flex-start;
+    box-sizing: border-box;
+
+    
+}

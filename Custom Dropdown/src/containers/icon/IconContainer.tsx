@@ -16,6 +16,7 @@ function IconContainer ({
     return (
         <img
             {...imageProps}
+            className='iconContainer'
             src={iconSource}
         />
     );

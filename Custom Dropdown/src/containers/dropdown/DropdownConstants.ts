@@ -24,8 +24,9 @@ const SELECT_GAME_OPTIONS = [
       name: 'Baldurs Gate 3',
       value: 'Baldurs Gate 3',
     },
-  ];
+];
 
 export const DROPDOWN_CONSTANTS = {
     initialOptions: SELECT_GAME_OPTIONS,
+    defaultPlaceholder: "Select a Game",
 } as const;

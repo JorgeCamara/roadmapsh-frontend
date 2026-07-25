@@ -4,15 +4,15 @@ import type { dropdownOptionIntf } from "@components/custom-dropdown/option-list
 import { DROPDOWN_CONSTANTS } from '@containers/dropdown/DropdownConstants';
 
 function DropdownSelector () {
-    const [selectedGame, setSelectedGame] = useState<undefined | string>(undefined);
+    const [selectedGame, setSelectedGame] = useState<undefined | dropdownOptionIntf>(undefined);
     console.log(selectedGame);
     
     const checkIsOptionSelected = (optionKey: string) => {
-        return selectedGame === optionKey;
+        return selectedGame?.key === optionKey;
     };
 
     const updateDropdownSelection = (selectedOption: dropdownOptionIntf) => {
-        setSelectedGame(selectedOption.key);
+        setSelectedGame(selectedOption);
     }
 
     const dropdownOptions = (DROPDOWN_CONSTANTS.initialOptions || []).map((originalOption: dropdownOptionIntf) => {
@@ -22,11 +22,15 @@ function DropdownSelector () {
         }
     });
 
+    const getPlaceholderValue = () => {
+      return selectedGame ? selectedGame.name : DROPDOWN_CONSTANTS.defaultPlaceholder;
+    }
+
     return (
     <>
       <section id="center">
         <CustomDropdown
-          placeholder="Select a Game"
+          placeholder={getPlaceholderValue()}
           dropdownOptions={dropdownOptions}
           updateDropdownSelection={updateDropdownSelection}
         />

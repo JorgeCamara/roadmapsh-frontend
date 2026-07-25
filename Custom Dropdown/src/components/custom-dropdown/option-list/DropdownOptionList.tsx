@@ -1,12 +1,16 @@
 import type { DropdownOptionListIntf, dropdownOptionIntf } from "@components/custom-dropdown/option-list/DropdownOptionList.types";
-import styles from '@components/custom-dropdown/dropdown/CustomDropdown.module.css';
+import styles from '@components/custom-dropdown/option-list/DropdownOptionList.module.css';
 
 function DropdownOptionList (props: DropdownOptionListIntf) {
     return (
-        <div>
-            <ul className={`${styles.customDropdownOptionList}`}>
+        <div className={styles.optionListContainer}>
+            <ul className={styles.optionListContent}>
                 {(props.optionList || []).map((option: dropdownOptionIntf) => 
-                    <li key={option.key} onClick={() => props.onOptionSelected(option)}>
+                    <li
+                        key={option.key}
+                        onClick={() => props.onOptionSelected(option)}
+                        className={styles.optionListItems}
+                    >
                         {option.name}
                     </li>
                 )}
