@@ -16,6 +16,6 @@
     white-space: nowrap;
 }
 
-/* .itemSelected{
-    font-weight: bold;
-} */
+.itemSelected{
+    background-color: black 0.5;
+}
