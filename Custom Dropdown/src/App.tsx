@@ -1,14 +1,12 @@
 import './App.css';
-import DropdownSelector from '@containers/dropdown/DropdownSelector';
+import DropdownDemo from '@/containers/dropdown-demo/DropdownDemo';
 
 function App() {
   return (
-    <>
-      <section id="center">
-        <DropdownSelector />
-      </section>
-    </>
-  )
+    <section id="center">
+      <DropdownDemo />
+    </section>
+  );
 }
 
-export default App
+export default App;

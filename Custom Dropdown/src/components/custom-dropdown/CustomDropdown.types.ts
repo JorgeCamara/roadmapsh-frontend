@@ -1,12 +1,12 @@
 import type { CSSProperties } from 'react';
 
-export interface DropdownOptionProps {
+export interface DropdownOptionProps{
     key: string,
     name: string,
     value: string | number,
 };
 
-export interface DropdownOptionListProps {
+export interface DropdownOptionListProps{
     dropdownId?: string;
     optionList: DropdownOptionProps[],
     onOptionSelected: (selection: DropdownOptionProps) => void,
@@ -14,7 +14,7 @@ export interface DropdownOptionListProps {
     maxWidth?: CSSProperties['maxWidth'],
 };
 
-export interface CustomDropdownProps {
+export interface CustomDropdownProps{
     componentId: string;
     placeholder: string,
     disabled?: boolean,
@@ -24,7 +24,7 @@ export interface CustomDropdownProps {
     optionListMaxWidth?: CSSProperties['maxWidth'],
 }
 
-export interface ListItemProps {
+export interface ListItemProps{
     option: DropdownOptionProps,
     onSelect: (option: DropdownOptionProps) => void,
     isSelected?: boolean,

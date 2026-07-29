@@ -20,6 +20,8 @@ function IconContainer ({
     return (
         <img
             {...imageProps}
+            aria-hidden='true'
+            alt=''
             className='iconContainer'
             width={iconSize}
             height={iconSize}

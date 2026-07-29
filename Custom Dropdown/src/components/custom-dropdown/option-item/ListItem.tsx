@@ -1,4 +1,4 @@
-import type { ListItemProps } from "@components/custom-dropdown/CustomDropdown.types";
+import type { ListItemProps } from '@components/custom-dropdown/CustomDropdown.types';
 import IconContainer from '@containers/icon/IconContainer';
 import { ICONS, getIconSize, ICON_SIZES } from '@containers/icon/Icon';
 import styles from '@components/custom-dropdown/option-item/ListItem.module.css';
@@ -10,12 +10,11 @@ function ListItem (props: ListItemProps) {
         isSelected ? styles.itemSelected : undefined,
     ]
         .filter(Boolean)
-        .join(" ");
+        .join(' ');
     
     return (
         <li
-            key={option.key}
-            role="option"
+            role='option'
             aria-selected={isSelected}
             onClick={() => onSelect(option)}
             className={itemStyles}

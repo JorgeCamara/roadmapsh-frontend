@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import CustomDropdown from "@components/custom-dropdown/dropdown/CustomDropdown";
 import type { DropdownOptionProps } from "@components/custom-dropdown/CustomDropdown.types";
-import { DROPDOWN_CONSTANTS, DROPDOWN_ID, DROPDOWN_LABEL } from '@containers/dropdown/DropdownConstants';
-import styles from '@containers/dropdown/DropdownSelector.module.css';
+import { DROPDOWN_CONSTANTS, DROPDOWN_ID, DROPDOWN_LABEL } from '@/containers/dropdown-demo/DropdownConstants';
+import styles from '@containers/dropdown-demo/DropdownDemo.module.css';
 
 function DropdownSelector () {
     const [selectedGame, setSelectedGame] = useState<null | DropdownOptionProps>(null);

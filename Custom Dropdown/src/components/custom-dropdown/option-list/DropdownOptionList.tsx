@@ -1,4 +1,4 @@
-import type { DropdownOptionListProps, DropdownOptionProps } from "@components/custom-dropdown/CustomDropdown.types";
+import type { DropdownOptionListProps, DropdownOptionProps } from '@components/custom-dropdown/CustomDropdown.types';
 import ListItem from '@/components/custom-dropdown/option-item/ListItem.tsx';
 import styles from '@components/custom-dropdown/option-list/DropdownOptionList.module.css';
 
@@ -12,7 +12,7 @@ function DropdownOptionList (props: DropdownOptionListProps) {
         >
             <ul
                 id={dropdownId}
-                role="listbox"
+                role='listbox'
                 className={styles.optionListContent}
             >
                 {(optionList || []).map((item: DropdownOptionProps) => {

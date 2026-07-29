@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react';
 import DropdownOptionList from '@components/custom-dropdown/option-list/DropdownOptionList';
-import IconContainer from "@/containers/icon/IconContainer";
-import { ICON_SIZES, ICONS, getIconSize } from "@/containers/icon/Icon";
+import IconContainer from '@/containers/icon/IconContainer';
+import { ICON_SIZES, ICONS, getIconSize } from '@/containers/icon/Icon';
 import type { DropdownOptionProps, CustomDropdownProps } from '@components/custom-dropdown/CustomDropdown.types';
 import DROPDOWN_CONSTANTS from '@components/custom-dropdown/dropdown/DropdownConstants';
 import styles from '@components/custom-dropdown/dropdown/CustomDropdown.module.css';
@@ -20,9 +20,9 @@ function CustomDropdown (props: CustomDropdownProps) {
         <div className={styles.customDropdown}>
             <button
                 disabled={disabled}
-                type="button"
+                type='button'
                 aria-expanded={isOpen}
-                aria-haspopup="listbox"
+                aria-haspopup='listbox'
                 aria-controls={componentId}
                 className={styles.dropdownSelector}
                 onClick={() => setIsOpen((current) => !current)}
