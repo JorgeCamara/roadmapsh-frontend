@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import CustomDropdown from "@components/custom-dropdown/dropdown/CustomDropdown";
-import type { dropdownOptionIntf } from "@components/custom-dropdown/option-list/DropdownOptionList.types";
+import type { dropdownOptionIntf } from "@components/custom-dropdown/CustomDropdown.types";
 import { DROPDOWN_CONSTANTS } from '@containers/dropdown/DropdownConstants';
 
 function DropdownSelector () {

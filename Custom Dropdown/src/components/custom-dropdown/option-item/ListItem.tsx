@@ -1,4 +1,4 @@
-import type { dropdownOptionIntf } from "@components/custom-dropdown/option-list/DropdownOptionList.types";
+import type { dropdownOptionIntf } from "@components/custom-dropdown/CustomDropdown.types";
 import IconContainer from '@containers/icon/IconContainer';
 import { ICONS, getIconSize, ICON_SIZES } from '@containers/icon/Icon';
 import styles from '@components/custom-dropdown/option-item/ListItem.module.css';

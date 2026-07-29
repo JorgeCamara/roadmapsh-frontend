@@ -1,4 +1,4 @@
-import type { DropdownOptionListIntf, dropdownOptionIntf } from "@components/custom-dropdown/option-list/DropdownOptionList.types";
+import type { DropdownOptionListIntf, dropdownOptionIntf } from "@components/custom-dropdown/CustomDropdown.types";
 import ListItem from '@/components/custom-dropdown/option-item/ListItem';
 import styles from '@components/custom-dropdown/option-list/DropdownOptionList.module.css';
 

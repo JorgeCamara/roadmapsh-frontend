@@ -2,7 +2,7 @@ import { useState } from "react";
 import DropdownOptionList from '@components/custom-dropdown/option-list/DropdownOptionList';
 import IconContainer from "@/containers/icon/IconContainer";
 import { ICON_SIZES, ICONS, getIconSize } from "@/containers/icon/Icon";
-import type { dropdownOptionIntf, CustomDropdownProps } from '@components/custom-dropdown/option-list/DropdownOptionList.types';
+import type { dropdownOptionIntf, CustomDropdownProps } from '@components/custom-dropdown/CustomDropdown.types';
 import DROPDOWN_CONSTANTS from '@components/custom-dropdown/dropdown/DropdownConstants';
 import styles from '@components/custom-dropdown/dropdown/CustomDropdown.module.css';
 
