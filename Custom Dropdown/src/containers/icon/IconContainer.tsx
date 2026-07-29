@@ -4,7 +4,7 @@ import {
     type IconName,
 } from '@containers/icon/Icon';
 
-interface IconContainerPropsIntf
+interface IconContainerPropsProps
   extends Omit<ComponentPropsWithoutRef<'img'>, 'src' | 'alt'> {
   iconName: IconName,
   iconSize?: number,
@@ -15,7 +15,7 @@ function IconContainer ({
     iconName,
     iconSize,
     ...imageProps
-}: IconContainerPropsIntf) {
+}: IconContainerPropsProps) {
     const iconSource = getIconSource(iconName);
     return (
         <img

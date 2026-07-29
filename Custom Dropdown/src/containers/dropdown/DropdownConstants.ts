@@ -28,5 +28,8 @@ const SELECT_GAME_OPTIONS = [
 
 export const DROPDOWN_CONSTANTS = {
     initialOptions: SELECT_GAME_OPTIONS,
-    defaultPlaceholder: "Select a Game",
+    defaultPlaceholder: 'Select a Game',
 } as const;
+
+export const DROPDOWN_ID = 'game_selector';
+export const DROPDOWN_LABEL = 'Select your favourite game from the options below';

@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import CustomDropdown from "@components/custom-dropdown/dropdown/CustomDropdown";
-import type { dropdownOptionIntf } from "@components/custom-dropdown/CustomDropdown.types";
-import { DROPDOWN_CONSTANTS } from '@containers/dropdown/DropdownConstants';
+import type { DropdownOptionProps } from "@components/custom-dropdown/CustomDropdown.types";
+import { DROPDOWN_CONSTANTS, DROPDOWN_ID, DROPDOWN_LABEL } from '@containers/dropdown/DropdownConstants';
+import styles from '@containers/dropdown/DropdownSelector.module.css';
 
 function DropdownSelector () {
-    const [selectedGame, setSelectedGame] = useState<undefined | dropdownOptionIntf>(undefined);
+    const [selectedGame, setSelectedGame] = useState<null | DropdownOptionProps>(null);
 
-    const updateDropdownSelection = (selectedOption: dropdownOptionIntf) => {
+    const updateDropdownSelection = (selectedOption: DropdownOptionProps) => {
       setSelectedGame(selectedOption);
     }
 
@@ -19,11 +20,13 @@ function DropdownSelector () {
     return (
     <>
       <section>
+        <span className={styles.dropdownLabel}>{DROPDOWN_LABEL}</span>
         <CustomDropdown
+          componentId={DROPDOWN_ID}
           placeholder={getPlaceholderValue()}
-          dropdownOptions={dropdownOptions}
-          updateDropdownSelection={updateDropdownSelection}
-          selectedOption={selectedGame}
+          options={dropdownOptions}
+          onChange={updateDropdownSelection}
+          value={selectedGame}
         />
       </section>
     </>

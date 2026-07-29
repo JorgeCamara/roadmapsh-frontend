@@ -1,16 +1,10 @@
-import type { dropdownOptionIntf } from "@components/custom-dropdown/CustomDropdown.types";
+import type { ListItemProps } from "@components/custom-dropdown/CustomDropdown.types";
 import IconContainer from '@containers/icon/IconContainer';
 import { ICONS, getIconSize, ICON_SIZES } from '@containers/icon/Icon';
 import styles from '@components/custom-dropdown/option-item/ListItem.module.css';
 
-interface ListItemIntf {
-    option: dropdownOptionIntf,
-    onItemClicked: (option: dropdownOptionIntf) => void,
-    isSelected?: boolean,
-}
-
-function ListItem (props: ListItemIntf) {
-    const { option, onItemClicked, isSelected } = props;
+function ListItem (props: ListItemProps) {
+    const { option, onSelect, isSelected } = props;
     const itemStyles = [
         styles.listItem,
         isSelected ? styles.itemSelected : undefined,
@@ -21,7 +15,9 @@ function ListItem (props: ListItemIntf) {
     return (
         <li
             key={option.key}
-            onClick={() => onItemClicked(option)}
+            role="option"
+            aria-selected={isSelected}
+            onClick={() => onSelect(option)}
             className={itemStyles}
         >
             <span className={styles.listItemContent}>

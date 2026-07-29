@@ -1,26 +1,27 @@
-import type { DropdownOptionListIntf, dropdownOptionIntf } from "@components/custom-dropdown/CustomDropdown.types";
-import ListItem from '@/components/custom-dropdown/option-item/ListItem';
+import type { DropdownOptionListProps, DropdownOptionProps } from "@components/custom-dropdown/CustomDropdown.types";
+import ListItem from '@/components/custom-dropdown/option-item/ListItem.tsx';
 import styles from '@components/custom-dropdown/option-list/DropdownOptionList.module.css';
 
-function DropdownOptionList (props: DropdownOptionListIntf) {
-    const { optionList, selectedOption } = props;
-    const onItemClick = (option: dropdownOptionIntf) => {
-        return props.onOptionSelected(option);
-    }
+function DropdownOptionList (props: DropdownOptionListProps) {
+    const { optionList, selectedOption, dropdownId } = props;
 
     return (
         <div
             className={styles.optionListContainer}
             style={{ maxWidth: props.maxWidth }}
         >
-            <ul className={styles.optionListContent}>
-                {(optionList || []).map((item: dropdownOptionIntf) => {
+            <ul
+                id={dropdownId}
+                role="listbox"
+                className={styles.optionListContent}
+            >
+                {(optionList || []).map((item: DropdownOptionProps) => {
                     return (
                         <ListItem
                             key={item.key}
                             option={item}
-                            onItemClicked={(clickedOption: dropdownOptionIntf) => onItemClick(clickedOption)}
-                            isSelected={selectedOption && selectedOption.key === item.key}
+                            onSelect={props.onOptionSelected}
+                            isSelected={selectedOption?.key === item.key || false}
                         />
                     )
                 }
