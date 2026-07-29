@@ -18,7 +18,7 @@ function DropdownSelector () {
 
     return (
     <>
-      <section id="center">
+      <section>
         <CustomDropdown
           placeholder={getPlaceholderValue()}
           dropdownOptions={dropdownOptions}

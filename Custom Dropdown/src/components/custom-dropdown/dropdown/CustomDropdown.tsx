@@ -18,7 +18,7 @@ function CustomDropdown (props: CustomDropdownProps) {
 
     return (
         <div className={styles.customDropdown}>
-            <button
+            <span
                 className={styles.dropdownSelectorContainer}
                 onClick={() => setIsOpen(!isOpen)}
             >
@@ -26,7 +26,7 @@ function CustomDropdown (props: CustomDropdownProps) {
                     <span className={styles.dropdownLabel}>{props.placeholder || DROPDOWN_CONSTANTS.defaultPlaceholder}</span>
                     <IconContainer iconName={stateIconName} iconSize={getIconSize(ICON_SIZES.SMALL)}/>           
                 </span>
-            </button>
+            </span>
             {isOpen &&
                 (<DropdownOptionList
                     optionList={props.dropdownOptions ?? []}
