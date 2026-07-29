@@ -6,13 +6,10 @@
 
 .dropdownSelectorContainer{
     display: flex;
-    /* position: absolute; */
     align-items: center;
-    /* flex: 0 0 auto; */
     align-self: center;
 
     box-sizing: border-box;
-    /* width: 180px; */
     width: 100%;
     height: 40px;
 
@@ -47,9 +44,3 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
-/* .customDropdownOptionList{
-    display: block;
-    list-style-type: none;
-    position: relative;
-} */

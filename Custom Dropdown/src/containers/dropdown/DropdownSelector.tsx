@@ -5,22 +5,12 @@ import { DROPDOWN_CONSTANTS } from '@containers/dropdown/DropdownConstants';
 
 function DropdownSelector () {
     const [selectedGame, setSelectedGame] = useState<undefined | dropdownOptionIntf>(undefined);
-    console.log(selectedGame);
-    
-    const checkIsOptionSelected = (optionKey: string) => {
-        return selectedGame?.key === optionKey;
-    };
 
     const updateDropdownSelection = (selectedOption: dropdownOptionIntf) => {
-        setSelectedGame(selectedOption);
+      setSelectedGame(selectedOption);
     }
 
-    const dropdownOptions = (DROPDOWN_CONSTANTS.initialOptions || []).map((originalOption: dropdownOptionIntf) => {
-        return {
-            ...originalOption,
-            selected: checkIsOptionSelected(originalOption.key)
-        }
-    });
+    const dropdownOptions = DROPDOWN_CONSTANTS.initialOptions || undefined;
 
     const getPlaceholderValue = () => {
       return selectedGame ? selectedGame.name : DROPDOWN_CONSTANTS.defaultPlaceholder;
@@ -33,6 +23,7 @@ function DropdownSelector () {
           placeholder={getPlaceholderValue()}
           dropdownOptions={dropdownOptions}
           updateDropdownSelection={updateDropdownSelection}
+          selectedOption={selectedGame}
         />
       </section>
     </>
